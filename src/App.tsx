@@ -1,11 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { IntlProvider } from 'react-intl';
+import enMessages from './lang/enMessages';
+import frMessages from './lang/frMessages';
+import Header from './components/Header';
 
-export default function App() {
+function App() {
+  const [activeLanguage, setActiveLanguage] = useState("fr");
+
+  const messages = activeLanguage === "en" ? enMessages : frMessages;
+
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <IntlProvider locale={activeLanguage} messages={messages}>
+      <div>
+        <Header/>
+      <button onClick={() => setActiveLanguage(prev => prev === "fr" ? "en" : "fr")}>
+        {`Change language: ${activeLanguage}`}
+      </button>
+      </div>
+    </IntlProvider>
+  );
 }
+
+export default App;
