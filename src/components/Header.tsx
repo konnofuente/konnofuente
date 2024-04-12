@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <div className="">
-      <div className="bg-primary p-4">
+      <div className="bg-primaryNormal p-4">
         <div className="flex py-130 px-10 justify-between items-center">
           <div>
             <img src={konnoLogo} alt="Logo" className="h-114 mr-115" />
