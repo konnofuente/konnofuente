@@ -1,5 +1,5 @@
 import { useIntl } from "react-intl";
-import konnoLogo from "../asssets/konnoFuente-logo-type-white.png";
+import konnoLogo from "../../asssets/konnoFuente-logo-type-white.png";
 
 export interface INavItem {
   item: string;
@@ -17,9 +17,8 @@ export default function Header() {
   ];
 
   return (
-    <div className="">
-      <div className="bg-primaryNormal p-4">
-        <div className="flex py-130 px-10 justify-between items-center">
+    <div className="header-section">
+      <div className="bg-primaryNormal flex py-2.5 px-32 justify-between items-center">
           <div>
             <img src={konnoLogo} alt="Logo" className="h-114 mr-115" />
           </div>
@@ -35,7 +34,6 @@ export default function Header() {
               
             </ul>
           </div>
-        </div>
       </div>
       <span>{formatMessage({ id: "bonjour" })}</span>
     </div>
