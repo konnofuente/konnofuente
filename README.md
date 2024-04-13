@@ -15,6 +15,70 @@ Welcome to the repository for my professional portfolio website. This project sh
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
 - **Firebase**: A comprehensive app development platform by Google, used here for hosting, database, and backend services.
 
+## Project Structure
+
+```
+my-portfolio/
+│
+├── public/                       # Static files like index.html, favicon.ico
+│
+├── src/
+│   ├── components/              # All UI components
+│   │   ├── base/                # Base components used across the entire application
+│   │   │   ├── Button/
+│   │   │   │   ├── Button.jsx   # Button component
+│   │   │   ├── Input/
+│   │   │   │   ├── Input.jsx    # Input field component
+│   │   │   │   └── input.css    # Input styles
+│   │   │   └── ...
+│   │   ├── common/              # Common components that are reused but not as foundational
+│   │   │   ├── Modal/
+│   │   │   │   ├── Modal.jsx    # Modal component
+│   │   │   ├── Card/
+│   │   │   │   ├── Card.jsx     # Card component for displaying content
+│   │   │   └── ...
+│   │   │
+│   │   └── layout/              # Components that dictate major layout structures
+│   │       ├── Navbar/
+│   │       │   ├── Navbar.jsx   # Navbar component
+│   │       ├── Footer/
+│   │       │   ├── Footer.jsx   # Footer component
+│   │       └── ...
+│   │
+│   ├── features/                # Feature modules
+│   │   ├── Project/
+│   │   │   ├── ProjectList.jsx  # Component to list projects
+│   │   │   ├── ProjectCard.jsx  # Single project card component
+│   │   │   └── projectsSlice.js # Redux slice for projects
+│   │   └── ...
+│   │
+│   ├── firebase/                # Firebase integration
+│   │   ├── config.js            # Firebase configuration
+│   │   └── services.js          # Firebase service functions
+│   │
+│   ├── hooks/                   # Custom React hooks
+│   │   └── useAuth.js           # Authentication hook
+│   │
+│   ├── pages/                   # Components representing pages
+│   │   ├── Home.jsx             # Home page
+│   │   ├── About.jsx            # About page
+│   │   ├── Portfolio.jsx        # Portfolio display page
+│   │   └── Contact.jsx          # Contact page
+│   │
+│   ├── utils/                   # Utility functions
+│   │   └── api.js               # API related functions
+│   │
+│   ├── App.jsx                  # Main React application component
+│   ├── index.jsx                # Entry point for React application
+│   └── index.css                # Global styles
+│
+├── .gitignore                   # Specifies intentionally untracked files to ignore
+├── package.json                 # NPM package manager file
+├── tailwind.config.js           # Tailwind CSS configuration
+└── README.md                    # Detailed description of the project
+```
+
+
 ## Project Setup
 
 To get a local copy up and running, follow these simple steps.
