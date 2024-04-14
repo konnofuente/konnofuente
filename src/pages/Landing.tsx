@@ -11,7 +11,7 @@ function LandingPage() {
   return (
 
       <div>
-        <Header />
+   
         <TitleAndSubtitle
           title={"ABOUT US"}
           subtitle={"Get to know more about me and my values"}

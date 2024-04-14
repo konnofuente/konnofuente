@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IntlProvider } from "react-intl";
 import enMessages from "./lang/enMessages";
 import frMessages from "./lang/frMessages";
-import LandingPage from "./pages/Landing";
+import DefaultLayout from "./layout/DefaultLayout";
 
 function App() {
   const [activeLanguage, setActiveLanguage] = useState("fr");
@@ -10,7 +10,7 @@ function App() {
 
   return (
     <IntlProvider locale={activeLanguage} messages={messages}>
-   <LandingPage></LandingPage>
+      <DefaultLayout></DefaultLayout>
     </IntlProvider>
   );
 }
