@@ -1,5 +1,5 @@
 import { useIntl } from "react-intl";
-import konnoLogo from "../../asssets/konnoFuente-logo-type-white.png";
+import konnoLogo from "../../../assets/icons/konnoFuente-logo-type-white.png";
 
 export interface INavItem {
   item: string;
