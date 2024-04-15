@@ -2,7 +2,6 @@ import { useState } from "react";
 import TitleAndSubtitle from "../components/base/TitleAndSubtitle/TitleAndSubtitle";
 import enMessages from "../lang/enMessages";
 import frMessages from "../lang/frMessages";
-import CircularImgBox from "../components/base/imgBox/CircularImgBox";
 import konnoImg from "../assets/images/konnoImg.jpg";
 
 function LandingPage() {
@@ -22,13 +21,11 @@ function LandingPage() {
       >
         {`Change language: ${activeLanguage}`}
       </button>
-      <CircularImgBox>
         <img
           src={konnoImg}
           alt="Hero image"
           className="w-340 h-340 rounded-full border-solid border-[102px] border-primaryNormal"
         />
-      </CircularImgBox>
     </div>
   );
 }
