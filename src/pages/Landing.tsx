@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import enMessages from "../lang/enMessages";
 import frMessages from "../lang/frMessages";
 import Header from "../components/layout/Header/Header";
-import TitleAndSubtitle from "../components/common/TitleAndSubtitle/TitleAndSubtitle";
+import TitleAndSubtitle from "../components/base/TitleAndSubtitle/TitleAndSubtitle";
 
 function LandingPage() {
   const [activeLanguage, setActiveLanguage] = useState("fr");
