@@ -1,4 +1,3 @@
-import { useIntl } from "react-intl";
 import konnoLogo from "../../../assets/logos/konnoFuente-logo-type-white.png";
 
 export interface INavItem {
@@ -7,7 +6,6 @@ export interface INavItem {
 }
 
 export default function Header() {
-  const { formatMessage } = useIntl();
   const navItems: INavItem[] = [
     { item: "HOME", route: "/" },
     { item: "ABOUT", route: "/about-us" },
@@ -36,7 +34,6 @@ export default function Header() {
           </div>
         </nav>
       </header>
-      <span>{formatMessage({ id: "bonjour" })}</span>
     </div>
   );
 }
