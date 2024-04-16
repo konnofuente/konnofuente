@@ -1,5 +1,7 @@
 import konnoImg from "../../assets/images/konnoImg.jpg";
 import ButtonWithIcon from "../../components/base/buttons/ButtonWithIcon";
+import iconRight from "../../assets/icons/icons_right-solid.png";
+
 
 const Hero = () => {
   return (
@@ -19,8 +21,8 @@ const Hero = () => {
           quality in every project.
         </p>
         <div className=" flex flex-wrap justify-between gap-5 items-start">
-          <ButtonWithIcon textButton="CONTACT ME" />
-          <ButtonWithIcon textButton="PROJECT" />
+          <ButtonWithIcon textButton="CONTACT ME" iconRight={iconRight} />
+          <ButtonWithIcon textButton="PROJECT" iconRight={iconRight} />
         </div>
       </div>
       <img
