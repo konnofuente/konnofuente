@@ -20,8 +20,8 @@ const Hero = () => {
           {t("hero.description")}
         </p>
         <div className=" flex flex-wrap justify-between gap-5 items-start">
-          <ButtonWithIcon textButton="CONTACT ME" iconRight={iconRight} />
-          <ButtonWithIcon textButton="PROJECT" iconRight={iconRight} />
+          <ButtonWithIcon textButton={t("button.contactMe")} iconRight={iconRight} />
+          <ButtonWithIcon textButton={t("header.project")} iconRight={iconRight} />
         </div>
       </div>
       <img

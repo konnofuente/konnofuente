@@ -12,9 +12,9 @@ export default function Header() {
   const navItems: INavItem[] = [
     { item: "header.home", route: "/" },
     { item: "header.about", route: "/about-us" },
-    { item: "header.myExperience", route: "/expertise" },
+    { item: "header.myExpertise", route: "/expertise" },
     { item: "header.project", route: "/project" },
-    { item: "header.project", route: "/experience" },
+    { item: "header.experience", route: "/experience" },
   ];
 
   return (

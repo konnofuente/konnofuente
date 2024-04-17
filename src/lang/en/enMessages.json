@@ -2,7 +2,7 @@
   "header": {
     "home": "Home",
     "about": "ABOUT",
-    "myExperience": "MY EXPERTISE",
+    "myExpertise": "MY EXPERTISE",
     "project": "PROJECT",
     "experience": "EXPERIENCE"
   },
@@ -16,5 +16,8 @@
     "post": "Frontend dev.",
     "skill": "ui/ux skill.",
     "description": "I specialize in crafting scalable frontend solutions with top-notch user experiences. My focus on clean code and client feedback ensures quality in every project."
+  },
+  "button": {
+    "contactMe": "CONTACT ME"
   }
 }

@@ -2,7 +2,7 @@
   "header": {
     "home": "Accueil",
     "about": "A PROPOS",
-    "myExperience": "MON EXPERTISE",
+    "myExpertise": "MON EXPERTISE",
     "project": "PROJETS",
     "experience": "EXPERIENCE"
   },
@@ -16,5 +16,8 @@
     "post": "Développeur frontend.",
     "skill": "Compétences en UI/UX.",
     "description": "Je me spécialise dans la création de solutions frontend évolutives avec des expériences utilisateur de premier ordre. Mon attention portée au code propre et aux retours des clients garantit la qualité de chaque projet."
+  },
+  "button": {
+    "contactMe": "CONTACTEZ MOI"
   }
 }
