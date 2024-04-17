@@ -1,6 +1,10 @@
 {
   "header": {
-    "home": "Home"
+    "home": "Home",
+    "about":"ABOUT",
+    "myExperience":"MY EXPERTISE",
+    "project": "PROJECT",
+    "experience":"EXPERIENCE"
   },
   "aboutMe": {
     "aboutMeTitle": "ABOUT ME",
