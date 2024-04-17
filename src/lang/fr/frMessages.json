@@ -1,13 +1,11 @@
 {
-  "header":{
-
+  "header": {
     "home": "Accueil"
-
   },
-  "about":{
-
-    "salut": "Salut"
-
+  "aboutMe": {
+    "meetTheMind": "Rencontrez l'esprit qui se cache derrière Fuente !",
+    "aboutMeTitle": "ABOUT ME",
+    "aboutMeSubtitle": "En savoir plus sur moi et mes valeurs",
+    "description": "Je suis Konno Meli Arnaud, largement connu sous le nom de Fuente, un développeur frontend chevronné du Cameroun. En plus d'un leadership fort et d'une éthique professionnelle, je donne la priorité à la gestion du temps et au respect des délais dans tous mes projets. Cet engagement garantit non seulement la qualité, mais aussi la fiabilité. Si vous appréciez la ponctualité et le dévouement, nous travaillerons exceptionnellement bien ensemble. Connectez-vous avec moi sur LinkedIn.Contactez-moi sur LinkedIn"
   }
-
 }
