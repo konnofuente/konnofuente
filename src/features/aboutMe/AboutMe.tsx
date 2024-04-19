@@ -11,7 +11,7 @@ const AboutMe = () => {
         title={t("aboutMe.aboutMeTitle")}
         subtitle={t("aboutMe.aboutMeSubtitle")}
       />
-      <div className="flex justify-between items-center w-full">
+      <div className="flex justify-between items-center w-full ">
         <div className="flex flex-col  items-start ">
           <h1 className="font-Raleway text-blackNormal text-xl font-extrabold uppercase">
             {t("aboutMe.meetTheMind")}

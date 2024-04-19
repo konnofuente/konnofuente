@@ -3,7 +3,7 @@ import LandingPage from "../pages/Landing";
 
 const DefaultLayout = () => {
   return (
-    <div>
+    <div className='overflow-hidden'>
       <Header />
       <LandingPage></LandingPage>
     </div>
