@@ -26,7 +26,7 @@ export default function Header() {
             <img src={konnoLogo} alt="Logo" className="sm:w-28 w-20"/>
           </div>
           <div>
-            <ul className=" hidden md:flex  py-20px items-center gap-24 ">
+            <ul className=" hidden lg:flex  py-20px items-center gap-24 ">
               {navItems.map((navItem, index) => (
                 <li key={index} className="">
                   <span className="text-white font-raleway text-base font-normal leading-normal hover:text-gray-300">

@@ -9,7 +9,7 @@ const ButtonWithIcon: React.FC<ButtonWithIconProps> = ({
   iconRight,
 }) => {
   return (
-    <div className="flex justify-center cursor-pointer items-center sm:h-16 w-full gap-2 sm:rounded-lg bg-primaryNormal py-5">
+    <div className="flex justify-center cursor-pointer items-center  w-full gap-2 sm:rounded-lg bg-primaryNormal py-5  ">
       <p className="text-WhiteNormal text-sm text-center font-Raleway font-bold text-whiteNormal">
         {textButton}
       </p>
