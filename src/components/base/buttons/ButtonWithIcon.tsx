@@ -9,8 +9,8 @@ const ButtonWithIcon: React.FC<ButtonWithIconProps> = ({
   iconRight,
 }) => {
   return (
-    <div className="flex justify-center items-center w-[220px] h-[64px] gap-[10px] sm:rounded-lg bg-primaryNormal">
-      <p className="text-WhiteNormal text-[20px] text-center font-Raleway font-bold text-whiteNormal">
+    <div className="flex justify-center items-center sm:w-56 sm:h-16 w-full gap-2 sm:rounded-lg bg-primaryNormal py-6">
+      <p className="text-WhiteNormal text-sm text-center font-Raleway font-bold text-whiteNormal">
         {textButton}
       </p>
       <img src={iconRight} alt="Icon right"></img>

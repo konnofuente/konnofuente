@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import konnoLogo from "../../../assets/logos/konnoFuente-logo-type-white.png";
+import menuIcon from "../../../assets/icons/menu.svg"
 
 export interface INavItem {
   item: string;
@@ -18,11 +19,11 @@ export default function Header() {
   ];
 
   return (
-    <div className="header-section">
+    <div className="header-section w-full">
       <header>
-        <nav className=" bg-primaryNormal flex  py-2.5  px-32  justify-between items-center ">
+        <nav className=" bg-primaryNormal flex  sm:py-2.5  sm:px-32 px-4 py-2 justify-between items-center w-full">
           <div>
-            <img src={konnoLogo} alt="Logo" />
+            <img src={konnoLogo} alt="Logo" className="sm:w-28 w-20"/>
           </div>
           <div>
             <ul className=" hidden md:flex  py-20px items-center gap-24 ">
@@ -34,7 +35,9 @@ export default function Header() {
                 </li>
               ))}
             </ul>
+            <img src={menuIcon} alt="" className="visible md:invisible"/>
           </div>
+
         </nav>
       </header>
     </div>
