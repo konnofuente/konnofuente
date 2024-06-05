@@ -9,9 +9,13 @@ module.exports = {
       colors: {
         ...colors,
       },
-      // fontSize: {
-      // ...fontSize
-      // },
+      fontFamily: {
+        ...fontFamilly,
+      },
+    },
+
+    fontSize: {
+      ...fontSize,
     },
   },
   plugins: [require("flowbite/plugin")],

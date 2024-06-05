@@ -1,10 +1,10 @@
 {
   "header": {
     "home": "Accueil",
-    "about": "A PROPOS",
-    "myExpertise": "MON EXPERTISE",
-    "project": "PROJETS",
-    "experience": "EXPERIENCE"
+    "about": "À propos",
+    "myExpertise": "Mon expertise",
+    "project": "Projet",
+    "experience": "Expériences"
   },
   "aboutMe": {
     "meetTheMind": "Rencontrez l'esprit qui se cache derrière Fuente !",
