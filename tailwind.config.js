@@ -1,18 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 
-import { colors } from "./public/assets/Colors.js";
+import { colors, fontFamilly, fontSize } from "./public/assets/styles/";
+
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-    "./node_modules/flowbite/**/*.js"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./node_modules/flowbite/**/*.js"],
   theme: {
     extend: {
       colors: {
         ...colors,
       },
+      // fontSize: {
+      // ...fontSize
+      // },
     },
   },
-  plugins: [
-    require('flowbite/plugin')
-  ],
+  plugins: [require("flowbite/plugin")],
 };
