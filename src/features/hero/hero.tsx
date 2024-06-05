@@ -1,5 +1,5 @@
 import konnoImg from "../../assets/images/konnoImg.jpg";
-import ButtonWithIcon from "../../components/base/buttons/Button";
+import ButtonWithIcon from "../../components/base/Buttons/Button";
 import iconRight from "../../assets/icons/icons_right-solid.png";
 import { useTranslation } from "react-i18next";
 

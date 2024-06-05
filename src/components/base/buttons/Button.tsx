@@ -4,7 +4,7 @@ import { ButtonState } from "../../../constants/enum";
 
 
 interface ButtonProps {
-  textButton: string;
+  textButton?: string;
   iconLeft?: string;
   iconRight?: string;
   state?: ButtonState;
@@ -23,7 +23,7 @@ export const Button: React.FC<ButtonProps> = ({
   rounded = true,
 }) => {
   const baseClasses =
-    "flex justify-center items-center  gap-2 py-[20px] px-[30px] cursor-pointer";
+    "flex justify-center items-center  gap-2 py-[20px] px-[40px] cursor-pointer";
   const roundedClass = rounded ? "sm:rounded-full" : "rounded-none";
   const stateClasses = {
     [ButtonState.NORMAL]: isFilled
@@ -42,7 +42,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <div className={buttonClasses}>
       {iconLeft && <img src={iconLeft} alt="Icon left" />}
-      <p className="text-base lg:text-xl text-center text-whiteNormal  font-Poppins font-medium">{textButton}</p>
+    { textButton && <p className="text-base lg:text-xl text-center text-whiteNormal  font-Poppins font-medium">{textButton}</p>}
       {iconRight && <img src={iconRight} alt="Icon right" />}
     </div>
   );
