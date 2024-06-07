@@ -1,11 +1,13 @@
 import Header from "../components/layout/Header/Header";
-import LandingPage from "../pages/Landing";
+// import HomePage from "../pages/HomePage";
+import MaintenancePage from "../pages/MaintenancePage";
 
 const DefaultLayout = () => {
   return (
     <div className='overflow-hidden'>
       <Header />
-      <LandingPage></LandingPage>
+      {/* <HomePage></HomePage> */}
+      <MaintenancePage></MaintenancePage>
     </div>
   );
 };

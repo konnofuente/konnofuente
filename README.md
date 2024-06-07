@@ -45,7 +45,7 @@ my-portfolio/
 │   │       │   ├── Footer.jsx   # Footer component
 │   │       └── ...
 │   │
-│   ├── features/                # Feature modules
+│   ├── sections/                # Feature modules
 │   │   ├── Project/
 │   │   │   ├── ProjectList.jsx  # Component to list projects
 │   │   │   ├── ProjectCard.jsx  # Single project card component
