@@ -20,7 +20,7 @@ export default function Header() {
   // ];
 
   return (
-    <header className="w-full overflow-none">
+    <header className="w-full overflow-none ">
       <div className="bg-primaryNormal flex  sm:py-2  lg:px-32 md:px-16 px-4 py-2 justify-between items-center w-full">
         <div className="w-1/4">
           <img
@@ -49,13 +49,14 @@ export default function Header() {
           <Button
             textButton="Contact Me"
             isFilled={false}
+            link="https://linktr.ee/konnofuente"
             hoverEffect="bg-blue-100 text-blue-700"
           />
         </div>
 
-        <div className="flex lg:hidden justify-end w-1/4">
+        {/* <div className="flex lg:hidden justify-end w-1/4">
           <ButtonIcon icon={assets.Icons.menuRoundIcon} />
-        </div>
+        </div> */}
       </div>
     </header>
   );

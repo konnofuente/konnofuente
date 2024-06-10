@@ -20,8 +20,8 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ texts = [],duration=10 }) => 
   }, [texts]);
 
   return (
-    <div>
-      <div className=" bg-whiteLight w-full rounded-full h-4  mt-4">
+    <div className="text-center ">
+      <div className="   bg-whiteLight w-full rounded-full h-4  mt-4 ">
         <motion.div
           className="bg-primaryNormal h-full rounded-full "
           initial={{ width: 0 }}

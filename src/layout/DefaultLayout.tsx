@@ -4,10 +4,15 @@ import MaintenancePage from "../pages/MaintenancePage";
 
 const DefaultLayout = () => {
   return (
-    <div className='overflow-hidden'>
+    <div className=''>
+      <div className="fixed top-0 w-full  z-50">
       <Header />
+      </div >
+
+      <div  className="">
       {/* <HomePage></HomePage> */}
       <MaintenancePage></MaintenancePage>
+      </div>
     </div>
   );
 };
