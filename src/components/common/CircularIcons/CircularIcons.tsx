@@ -1,6 +1,8 @@
 import React from 'react';
 import './CircularIcons.css';
 import assets from "../../../assets/assets";
+import ProgressBar from '../../base/ProgressBar/ProgressBar';
+import { updateTexts } from '../../../constants/data/data';
 
 const icons = [
     { src: assets.Icons.trelloIcon, alt: "trelloIcon" },
@@ -14,11 +16,12 @@ const CircularIcons: React.FC = () => {
   return (
     <div className="relative w-full h-screen flex items-center justify-center bg-green-200">
       <div className="absolute flex flex-col items-center">
-        <p className="text-center text-lg font-semibold mb-4">
-          Currently updating my portfolio <span role="img" aria-label="emoji">😎</span>
+        <p className="text-center text-black text-xl font-normal  mb-4 font-['Poppins']">
+          Currently updating my portfolio <span role="img" aria-label="emoji">😎..</span>
+          <ProgressBar texts={updateTexts} duration={20} />
         </p>
       </div>
-      <div className="relative w-64 h-64">
+      <div className="relative w-[700px] h-[700px]">
         {icons.map((icon, index) => {
           const angle = (index / icons.length) * 360;
           const x = 50 + 40 * Math.cos((angle * Math.PI) / 180);

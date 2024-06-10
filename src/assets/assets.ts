@@ -9,12 +9,12 @@ const Images = {
   };
 
 const Icons = {
-    menuRoundIcon: require(ICON_PATH+'menu-round.png'),
-    trelloIcon: require(ICON_PATH +'trello.png'),
-    reactIcon: require(ICON_PATH +'react.png'),
-    vuejsIcon: require(ICON_PATH +'vuejs.png'),
-    flutterIcon: require(ICON_PATH +'flutter.png'),
-    firebaseIcon: require(ICON_PATH +'firebase.png'),
+    menuRoundIcon: require(ICON_PATH+'menu-round.svg'),
+    trelloIcon: require(ICON_PATH +'trello.svg'),
+    reactIcon: require(ICON_PATH +'react.svg'),
+    vuejsIcon: require(ICON_PATH +'vuejs.svg'),
+    flutterIcon: require(ICON_PATH +'flutter.svg'),
+    firebaseIcon: require(ICON_PATH +'firebase.svg'),
   };
   
   const Logos = {
