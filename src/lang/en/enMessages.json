@@ -1,0 +1,27 @@
+{
+  "data":{
+    "updatingPlatform":" Currently updating my portfolio",
+    "contactMe": "Contact Me"
+  },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "myExpertise": "My Expertise",
+    "project": "Project",
+    "experience": "Experiences"
+  },
+  "aboutMe": {
+    "aboutMeTitle": "ABOUT ME",
+    "aboutMeSubtitle": "Get to know more about me and my values",
+    "meetTheMind": "Meet the Mind Behind Fuente !",
+    "description": "I'm Konno Meli Arnaud,widely recognized as Fuente, a seasoned frontend developer from Cameroon. Proficient in Figma, AdobeProducts, and Affinity Design, I blend technical skills with design acumen to create captivating user interfaces. Along with strong leadership and professional ethics, I prioritize time management anddeadline adherence in all my projects. This commitment ensures notonly quality but also reliability. If you value punctuality and dedication, we'll work exceptionally well together. Connect with me on LinkedIn."
+  },
+  "hero": {
+    "post": "Frontend dev.",
+    "skill": "ui/ux skill.",
+    "description": "I specialize in crafting scalable frontend solutions with top-notch user experiences. My focus on clean code and client feedback ensures quality in every project."
+  },
+  "button": {
+    "contactMe": "CONTACT ME"
+  }
+}
