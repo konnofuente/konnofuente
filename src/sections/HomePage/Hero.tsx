@@ -1,7 +1,7 @@
 import konnoImg from "../../assets/images/konnoImg.jpg";
-import ButtonWithIcon from "../../components/base/Buttons/Button";
 import iconRight from "../../assets/icons/icons_right-solid.png";
 import { useTranslation } from "react-i18next";
+import { Button } from "../../components/base";
 
 const Hero = () => {
   const [t] = useTranslation("message");
@@ -21,10 +21,10 @@ const Hero = () => {
         </p>
        <div className="flex flex-wrap md:flex-row  lg:flex-nowrap  sm:justify-between gap-5 md:gap-1 lg:gap-4 items-start w-full mb-10 md:mb-0">
         <div className="w-full md:w-[47%] lg:w-[100%] mb-2 " >
-         <ButtonWithIcon textButton={t("button.contactMe")} iconRight={iconRight} />
+         <Button textButton={t("button.contactMe")} iconRight={iconRight} />
         </div>
         <div className="w-full md:w-[47%] lg:w-[100%] mb-2 " >
-         <ButtonWithIcon textButton={t("header.project")} iconRight={iconRight} />
+         <Button textButton={t("header.project")} iconRight={iconRight} />
         </div>
 
        </div>
