@@ -66,8 +66,8 @@ const SimpleAnimation: React.FC = () => {
             </motion.img>
       <div className="flex items-center justify-center  bg-gray-100">
 
-    {/* <motion.div
-       className="w-32 h-32 bg-blue-500"
+    <motion.div
+       className="w-32 h-32 bg-blue-500 text-center "
       animate={{
         scale: [1, 2, 2, 1, 1],
         rotate: [0, 0, 180, 180, 0],
@@ -80,7 +80,10 @@ const SimpleAnimation: React.FC = () => {
         repeat: Infinity,
         repeatDelay: 1
       }}
-    /> */}
+    >
+
+    {/* <p>Loading</p> */}
+    </motion.div>
     </div>
 
       

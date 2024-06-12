@@ -1,3 +1,4 @@
+import GestureAnimation from "../components/animations/GestureAnimation";
 import SimpleAnimation from "../components/animations/SimpleAnimation";
 import Header from "../components/layout/Header/Header";
 // import HomePage from "../pages/HomePage";
@@ -13,7 +14,8 @@ const DefaultLayout = () => {
       <div  className="">
       {/* <HomePage></HomePage> */}
       {/* <MaintenancePage></MaintenancePage> */}
-      <SimpleAnimation></SimpleAnimation>
+      {/* <SimpleAnimation></SimpleAnimation> */}
+      <GestureAnimation></GestureAnimation>
       </div>
     </div>
   );
