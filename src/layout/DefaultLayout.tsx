@@ -1,6 +1,6 @@
-import Header from "../components/layout/Header/Header";
+import Header from "../components/common/Header/Header";
+import HomePage from "../pages/HomePage";
 // import HomePage from "../pages/HomePage";
-import MaintenancePage from "../pages/MaintenancePage";
 
 const DefaultLayout = () => {
   return (
@@ -9,9 +9,9 @@ const DefaultLayout = () => {
       <Header />
       </div >
 
-      <div  className="">
-      {/* <HomePage></HomePage> */}
-      <MaintenancePage></MaintenancePage>
+      <div  className="mt-[130px] ">
+      <HomePage></HomePage>
+      {/* <MaintenancePage></MaintenancePage> */}
       </div>
     </div>
   );
