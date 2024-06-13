@@ -1,12 +1,15 @@
 import { useTranslation } from "react-i18next";
 import assets from "../../assets/assets";
 
+
 const Hero = () => {
   const [t] = useTranslation("message");
 
-  
   return (
-    <div className="grid grid-cols-4 w-full h-[70vh] md:px-[80px] lg:px-[100px] bg-green-300 justify-between items-center">
+    <div className=" bg-green-300 sm:h-[55vh] lg:h-[70vh] md:px-[80px] lg:px-[130px]">
+
+      <div   className=" h-full grid grid-cols-4 w-full   justify-between items-center">
+
       <div className="col-span-1">
         <SideTitle
           title={"designer"}
@@ -17,11 +20,14 @@ const Hero = () => {
       </div>
 
       <div className="col-span-2 h-full flex justify-center items-center">
-  <div className="relative h-full w-full max-w-full max-h-full overflow-hidden">
-    <img className="absolute top-0 left-0 h-full w-full object-contain" src={assets.Images.heroImage} alt="Hero" />
-  </div>
-</div>
-
+        <div className="relative h-full w-full max-w-full max-h-full overflow-hidden">
+        <img
+            className="absolute bottom-0 left-1/2 transform -translate-x-1/2 object-cover md:h-[90%]  lg:h-full w-auto max-w-full max-h-full"
+            src={assets.Images.heroImage}
+            alt="Hero"
+          />
+        </div>
+      </div>
 
       <div className="col-span-1">
         <SideTitle
@@ -31,11 +37,15 @@ const Hero = () => {
           }
         />
       </div>
+      </div>
     </div>
   );
 };
 
 export default Hero;
+
+
+// export default Hero;
 
 interface Props {
   title: string;
@@ -57,4 +67,3 @@ const SideTitle: React.FC<Props> = ({ title, description, opacity = 60 }) => {
     </div>
   );
 };
-
