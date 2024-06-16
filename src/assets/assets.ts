@@ -7,6 +7,7 @@ const lOGO_PATH = './logos/'
 const Images = {
   
   heroImage: require(IMAGE_PATH+'konnomelifuente.png'),
+  projetCardDefault: require(IMAGE_PATH+'projetCardDefault.png'),
   };
 
 const Icons = {
