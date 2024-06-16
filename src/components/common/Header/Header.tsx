@@ -2,7 +2,10 @@ import { useTranslation } from "react-i18next";
 import assets from "../../../assets/assets";
 import { Button } from "../../base";
 import { motion } from "framer-motion";
+import animationConfig from "../../../config/animationConfig";
 // import ButtonIcon from "../../base/Buttons/ButtonIcon";
+
+const { delays, durations, easing } = animationConfig;
 
 export interface INavItem {
   item: string;
@@ -24,7 +27,7 @@ export default function Header() {
     <motion.header 
     initial={{ y: -100 }}  
     animate={{ y: 0 }}     
-    transition={{ duration: 0.5,delay:0.5 }} 
+    transition={{ duration: durations.short ,delay:delays.initial ,ease: easing.easeIn}} 
     className="w-full overflow-none ">
       <div className="bg-primaryNormal flex  sm:py-2  lg:px-32 md:px-16 px-4 py-2 justify-between items-center w-full">
       <motion.div 
