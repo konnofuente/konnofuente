@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import assets from "../../../assets/assets";
 import { Button } from "../../base";
+import { motion } from "framer-motion";
 // import ButtonIcon from "../../base/Buttons/ButtonIcon";
 
 export interface INavItem {
@@ -20,15 +21,20 @@ export default function Header() {
   // ];
 
   return (
-    <header className="w-full overflow-none ">
+    <motion.header 
+    initial={{ y: -100 }}  
+    animate={{ y: 0 }}     
+    transition={{ duration: 0.5,delay:0.5 }} 
+    className="w-full overflow-none ">
       <div className="bg-primaryNormal flex  sm:py-2  lg:px-32 md:px-16 px-4 py-2 justify-between items-center w-full">
-        <div className="w-1/4">
-          <img
-            src={assets.Logos.whiteLogo}
-            alt="Logo"
-            className="w-18 h-auto"
-          />
-        </div>
+      <motion.div 
+    >
+      <img
+        src={assets.Logos.whiteLogo}
+        alt="Logo"
+        className="w-14 sm:w-16 md:w-20 h-auto"
+      />
+    </motion.div>
         {/* 
 
         <div className="w-2/4 hidden lg:flex overflow-hidden shrink-0  flex-row items-center justify-start p-5 box-border gap-[30px]">
@@ -58,6 +64,6 @@ export default function Header() {
           <ButtonIcon icon={assets.Icons.menuRoundIcon} />
         </div> */}
       </div>
-    </header>
+    </motion.header>
   );
 }

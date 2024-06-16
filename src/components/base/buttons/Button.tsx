@@ -27,7 +27,7 @@ export const Button: React.FC<ButtonProps> = ({
   rounded = true,
 }) => {
   const baseClasses = customCss ? customCss :
-    "flex justify-center items-center  gap-2 py-[20px] px-[40px] cursor-pointer";
+    "flex justify-center items-center  gap-2  sm:py-[40px]  sm:px-[10px] md:py-[10px] md:px-[40px] cursor-pointer";
   const roundedClass = rounded ? "sm:rounded-full" : "rounded-none";
   const stateClasses = {
     [ButtonState.NORMAL]: isFilled

@@ -9,7 +9,7 @@ const DefaultLayout = () => {
       <Header />
       </div >
 
-      <div  className="mt-[130px] ">
+      <div  className="  mt-[70px] sm:mt-[80px] ">
       <HomePage></HomePage>
       {/* <MaintenancePage></MaintenancePage> */}
       </div>
