@@ -1,151 +1,208 @@
+Sure, here's a detailed README for your project:
 
-# Konno Meli Fuente Portfolio
+---
 
-Welcome to the repository for my professional portfolio website. This project showcases my skills and projects as a Frontend Developer specializing in React, Tailwind CSS, and Firebase. The portfolio is designed to highlight my UI/UX expertise and technical proficiency.
+# Portfolio Project
 
-## Features
-
-- **Responsive Design**: Utilizes Tailwind CSS for a layout that adjusts beautifully across all devices.
-- **Dynamic Project Showcase**: Projects are dynamically loaded and updated through Firebase.
-- **Contact Form**: Includes a functional contact form that integrates Firebase for message handling.
-- **Secure and Fast**: Hosted on Firebase for secure and reliable access with fast loading times.
-
-## Technologies Used
-
-- **React**: A JavaScript library for building user interfaces.
-- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
-- **Firebase**: A comprehensive app development platform by Google, used here for hosting, database, and backend services.
+This project is a portfolio website built with React and TypeScript. It follows the principles of Clean Architecture to ensure a scalable, maintainable, and testable codebase.
 
 ## Project Structure
 
+The project is organized into several key folders, each with a specific responsibility. This organization promotes separation of concerns and makes the project easier to navigate and maintain.
+
+### Folder Structure
+
 ```
-my-portfolio/
-│
-├── public/                       # Static files like index.html, favicon.ico
-│
-├── src/
-│   ├── components/              # All UI components
-│   │   ├── base/                # Base components used across the entire application
-│   │   │   ├── Button/
-│   │   │   │   ├── Button.jsx   # Button component
-│   │   │   ├── Input/
-│   │   │   │   ├── Input.jsx    # Input field component
-│   │   │   │   └── input.css    # Input styles
-│   │   │   └── ...
-│   │   ├── common/              # Common components that are reused but not as foundational
-│   │   │   ├── Modal/
-│   │   │   │   ├── Modal.jsx    # Modal component
-│   │   │   ├── Card/
-│   │   │   │   ├── Card.jsx     # Card component for displaying content
-│   │   │   └── ...
-│   │   │
-│   │   └── layout/              # Components that dictate major layout structures
-│   │       ├── Navbar/
-│   │       │   ├── Navbar.jsx   # Navbar component
-│   │       ├── Footer/
-│   │       │   ├── Footer.jsx   # Footer component
-│   │       └── ...
-│   │
-│   ├── sections/                # Feature modules
-│   │   ├── Project/
-│   │   │   ├── ProjectList.jsx  # Component to list projects
-│   │   │   ├── ProjectCard.jsx  # Single project card component
-│   │   │   └── projectsSlice.js # Redux slice for projects
-│   │   └── ...
-│   │
-│   ├── firebase/                # Firebase integration
-│   │   ├── config.js            # Firebase configuration
-│   │   └── services.js          # Firebase service functions
-│   │
-│   ├── hooks/                   # Custom React hooks
-│   │   └── useAuth.js           # Authentication hook
-│   │
-│   ├── pages/                   # Components representing pages
-│   │   ├── Home.jsx             # Home page
-│   │   ├── About.jsx            # About page
-│   │   ├── Portfolio.jsx        # Portfolio display page
-│   │   └── Contact.jsx          # Contact page
-│   │
-│   ├── utils/                   # Utility functions
-│   │   └── api.js               # API related functions
-│   │
-│   ├── App.jsx                  # Main React application component
-│   ├── index.jsx                # Entry point for React application
-│   └── index.css                # Global styles
-│
-├── .gitignore                   # Specifies intentionally untracked files to ignore
-├── package.json                 # NPM package manager file
-├── tailwind.config.js           # Tailwind CSS configuration
-└── README.md                    # Detailed description of the project
+src/
+├── features/
+│   ├── portfolio/
+│   │   ├── components/
+│   │   │   ├── ProjectList.tsx
+│   │   │   └── ProjectDetails.tsx
+│   │   ├── hooks/
+│   │   │   └── usePortfolio.ts
+│   │   ├── services/
+│   │   │   └── PortfolioService.ts
+│   │   ├── store/
+│   │   │   ├── portfolioActions.ts
+│   │   │   ├── portfolioReducer.ts
+│   │   │   └── portfolioSelectors.ts
+│   │   ├── models/
+│   │   │   └── ProjectModel.ts
+│   │   └── PortfolioFeature.ts
+│   └── about/
+│       ├── components/
+│       │   └── AboutMe.tsx
+│       ├── hooks/
+│       │   └── useAbout.ts # function that manipulate state
+│       ├── services/
+│       │   └── AboutService.ts
+│       ├── store/
+│       │   ├── aboutActions.ts
+│       │   ├── aboutReducer.ts
+│       │   └── aboutSelectors.ts
+│       ├── models/
+│       │   └── AboutModel.ts
+│       └── AboutFeature.ts
+├── core/
+│   ├── entities/
+│   │   ├── Project.ts
+│   │   └── User.ts
+│   ├── usecases/
+│   │   ├── ManageProjects.ts
+│   │   └── ManageUsers.ts
+├── infrastructure/
+│   ├── api/
+│   │   ├── ApiService.ts
+│   │   └── HttpClient.ts
+│   ├── repositories/
+│   │   ├── ProjectRepository.ts
+│   │   └── UserRepository.ts
+│   └── mappers/
+│       ├── ProjectMapper.ts
+│       └── UserMapper.ts
+├── shared/
+│   ├── components/
+│   │   ├── Button.tsx
+│   │   └── Modal.tsx
+│   ├── hooks/
+│   │   └── useFetch.ts
+│   ├── utils/
+│   │   ├── helpers.ts
+│   │   └── constants.ts
+│   └── models/
+│       └── ApiResponse.ts
+├── App.tsx
+└── index.tsx
 ```
 
+### Detailed Folder Explanation
 
-## Project Setup
+#### `features/`
 
-To get a local copy up and running, follow these simple steps.
+This folder contains self-contained modules for each feature of the application. Each feature has its own components, hooks, services, state management, and models.
+
+- **portfolio/**: Manages the portfolio projects.
+  - **components/**: UI components specific to the portfolio feature.
+    - `ProjectList.tsx`: Displays a list of portfolio projects.
+    - `ProjectDetails.tsx`: Displays details of a specific project.
+  - **hooks/**: Custom hooks for managing portfolio-related logic.
+    - `usePortfolio.ts`: Custom hook for portfolio logic.
+  - **services/**: Logic for interacting with the portfolio data.
+    - `PortfolioService.ts`: Service for fetching portfolio data.
+  - **store/**: State management for the portfolio feature.
+    - `portfolioActions.ts`: Action creators for portfolio state.
+    - `portfolioReducer.ts`: Reducer for portfolio state.
+    - `portfolioSelectors.ts`: Selectors for portfolio state.
+  - **models/**: Data models specific to the portfolio feature.
+    - `ProjectModel.ts`: Model representing a portfolio project.
+  - `PortfolioFeature.ts`: Entry point for portfolio-specific logic.
+
+
+#### `core/`
+
+This folder contains the business logic and domain models, independent of any specific feature or framework.
+
+- **entities/**: Business entities shared across the application.
+  - `Project.ts`: Core business entity representing a project.
+  - `User.ts`: Core business entity representing a user.
+- **usecases/**: Application-specific business rules.
+  - `ManageProjects.ts`: Business rules for managing projects.
+  - `ManageUsers.ts`: Business rules for managing users.
+
+#### `infrastructure/`
+
+This folder handles data access, API calls, and external service integrations.
+
+- **api/**: Services for making API calls.
+  - `ApiService.ts`: Base service for API interactions.
+  - `HttpClient.ts`: HTTP client configuration.
+- **repositories/**: Interfaces and implementations for data access.
+  - `ProjectRepository.ts`: Repository for accessing project data.
+  - `UserRepository.ts`: Repository for accessing user data.
+- **mappers/**: Conversions between domain models and data transfer objects (DTOs).
+  - `ProjectMapper.ts`: Mapper for project data.
+  - `UserMapper.ts`: Mapper for user data.
+
+#### `shared/`
+
+This folder contains reusable components, hooks, utilities, and models.
+
+- **components/**: Reusable UI components.
+  - `Button.tsx`: Reusable button component.
+  - `Modal.tsx`: Reusable modal component.
+- **hooks/**: Reusable hooks.
+  - `useFetch.ts`: Custom hook for fetching data.
+- **utils/**: Helper functions and constants.
+  - `helpers.ts`: Utility functions.
+  - `constants.ts`: Application constants.
+- **models/**: Generic data models used across features.
+  - `ApiResponse.ts`: Model representing a generic API response.
+
+## Getting Started
 
 ### Prerequisites
 
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Ensure you have the following installed:
+- Node.js
+- npm or yarn
 
 ### Installation
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/konnofuente/my-portfolio.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
-3. Configure your Firebase
-   - Create a Firebase project in the Firebase console.
-   - Add your Firebase project credentials to `src/firebase-config.js`.
+1. Clone the repository:
 
-### Usage
+```bash
+git clone https://github.com/yourusername/portfolio-project.git
+```
 
-Start the development server:
-```sh
+2. Navigate to the project directory:
+
+```bash
+cd portfolio-project
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+or
+```bash
+yarn install
+```
+
+### Running the Project
+
+To start the development server:
+
+```bash
 npm start
 ```
-This command runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+or
+```bash
+yarn start
+```
 
-## Deployment
+### Building the Project
 
-To deploy this project on Firebase Hosting, follow these steps:
+To create a production build:
 
-1. Build the project
-   ```sh
-   npm run build
-   ```
-2. Deploy to Firebase
-   ```sh
-   firebase deploy
-   ```
+```bash
+npm run build
+```
+or
+```bash
+yarn build
+```
 
 ## Contributing
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+If you want to contribute to this project, please fork the repository and create a new branch for your changes. Submit a pull request with a detailed description of your changes.
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+This project is licensed under the MIT License.
 
-## Contact
+---
 
-Arnaud Fuente - konomelifuente@gmail.com
-
-Project Link: [https://github.com/konnofuente/my-portfolio](https://github.com/konnofuente/my-portfolio.gite)
-
-
-
-
+This README provides a comprehensive guide to understanding and working with your project, following Clean Architecture principles.
