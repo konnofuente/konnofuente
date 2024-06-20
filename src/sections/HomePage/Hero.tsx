@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import animationConfig from "../../config/animationConfig";
 import ProjectCard from "../../components/common/ProjectCard/ProjectCard";
 import SideTitle from "../../components/base/SideTitle/SideTitle";
+import { TabButton } from "../../components/base/buttons";
 
 const { delays, durations, easing } = animationConfig;
 
@@ -63,23 +64,31 @@ const Hero = () => {
         </div>
       </motion.div>
 
-      <motion.div 
-      
-         initial={{ y: 100, opacity: 0 }}
-         animate={{ y: 0, opacity: 1 }}
-         transition={{
-           delay: delays.d3,
-           duration: durations.long,
-           ease: easing.easeInOut,
-         }}
-      className="mb-[100px] py-[36px] flex flex-wrap justify-between space-y-5 sm:space-y-0 sm:px-[50px] md:px-[70px] lg:px-[100px]">
-        
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          delay: delays.d3,
+          duration: durations.long,
+          ease: easing.easeInOut,
+        }}
+        className="mb-[100px] py-[36px] flex flex-wrap justify-between space-y-5 sm:space-y-0 sm:px-[50px] md:px-[70px] lg:px-[100px]"
+      >
         <div className="w-full h-9 flex justify-center items-center gap-7">
           <div className="hidden sm:block w-full h-0 border border-stone-300" />
+
           <div className="w-full text-zinc-600 text-xl font-normal font-['Helvetica'] leading-[30px] text-center">
             This are my most recent realisation
           </div>
           <div className="hidden sm:block w-full h-0 border border-stone-300" />
+        </div>
+
+        <div className="w-[1299px] h-[46px] px-10 flex-col justify-start items-center gap-2.5 inline-flex">
+          <div className="self-stretch justify-between items-center inline-flex">
+          <TabButton isActive={true}>Most Recent</TabButton>
+          <TabButton isActive={false}>Most Recent</TabButton>
+          <TabButton isActive={false}>Most Recent</TabButton>
+          </div>
         </div>
 
         <div className="grid justify-center items-center grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 w-full">
