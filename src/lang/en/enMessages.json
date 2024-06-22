@@ -1,4 +1,8 @@
 {
+  "data":{
+    "updatingPlatform":" Currently updating my portfolio",
+    "contactMe": "Contact Me"
+  },
   "header": {
     "home": "Home",
     "about": "About",

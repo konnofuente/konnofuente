@@ -1,19 +1,27 @@
-// src/assets/assets.ts
+/* eslint-disable import/no-anonymous-default-export */
+
+const ICON_PATH = './icons/'
+const IMAGE_PATH = './images/'
+const lOGO_PATH = './logos/'
 
 const Images = {
-    // Add image paths here
+  
+  heroImage: require(IMAGE_PATH+'konnomelifuente.png'),
+  projetCardDefault: require(IMAGE_PATH+'projetCardDefault.png'),
   };
 
 const Icons = {
-    menuRoundIcon: require('./icons/menu-round.png'),
-    // Add image paths here
+    menuRoundIcon: require(ICON_PATH+'menu-round.svg'),
+    trelloIcon: require(ICON_PATH +'trello.svg'),
+    reactIcon: require(ICON_PATH +'react.svg'),
+    vuejsIcon: require(ICON_PATH +'vuejs.svg'),
+    flutterIcon: require(ICON_PATH +'flutter.svg'),
+    firebaseIcon: require(ICON_PATH +'firebase.svg'),
   };
   
   const Logos = {
-    whiteLogo: require('./logos/konnoFuente-logo-type-white.png'),
-    darkLogo: require('./logos/konnoFuente-logo-type-dark.png'),
-    // iconEdit: require('./icons/icon-edit.svg'),
-    // iconDelete: require('./icons/icon-delete.svg'),
+    whiteLogo: require(lOGO_PATH+'konnoFuente-logo-type-white.png'),
+    darkLogo: require(lOGO_PATH+'konnoFuente-logo-type-dark.png'),
   };
   
   export default { Images, Logos,Icons };
