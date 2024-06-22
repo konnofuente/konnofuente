@@ -1,20 +1,22 @@
-
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import DefaultLayout from '../layout/DefaultLayout';
-import HomeFeature from '../features/home/HomeFeature';
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, useRoutes } from 'react-router-dom';
+import { routesConfig } from './RoutesConfig';
 
 const AppRoutes: React.FC = () => {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<DefaultLayout />}>
-                    <Route index element={<HomeFeature />} />
-                    <Route path="home" element={<HomeFeature />} />
-                </Route>
-            </Routes>
-        </Router>
-    );
+  const element = useRoutes(routesConfig);
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      {element}
+    </Suspense>
+  );
 };
 
-export default AppRoutes;
+const App: React.FC = () => {
+  return (
+    <Router>
+      <AppRoutes />
+    </Router>
+  );
+};
+
+export default App;
