@@ -1,5 +1,5 @@
 import React from "react";
-
+import './style.css'; 
 import { TabButton } from "../../../shared/components/buttons";
 import ProjectCard from "../../../shared/components/ProjectCard";
 import { useTabNavigator } from "../hooks/useTabNavigator";
@@ -10,9 +10,9 @@ const {activeIndex,tabLabels,setActiveIndex,loading,error,filteredProjects} = us
 
 
   return (
-    <div className="w-full flex-col justify-start items-center inline-flex">
-      <div className="w-full overflow-x-auto">
-        <div className="flex space-x-4 lg:space-x-10 items-center flex-nowrap">
+    <div className="  w-full flex-col justify-start items-center inline-flex">
+      <div className=" no-scrollbar w-full overflow-x-auto">
+        <div className="flex space-x-10 sm:justify-between items-center flex-nowrap">
           {tabLabels.map((label, index) => (
             <TabButton
               key={index}

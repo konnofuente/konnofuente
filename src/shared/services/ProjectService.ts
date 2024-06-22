@@ -21,7 +21,43 @@ export const fetchProjects = async (): Promise<Project[]> => {
       ['path/to/image3.jpg', 'path/to/image4.jpg'],
       new Date(2023, 1, 1),
       [new Technology(2, 'Vue', 'path/to/vue-logo.png')],
-      ProjectCategory.Web
+      ProjectCategory.Designs
+    ),
+    new Project(
+      'Web Dev Project 1',
+      'Client B',
+      'http://example.com',
+      ['path/to/image3.jpg', 'path/to/image4.jpg'],
+      new Date(2023, 1, 1),
+      [new Technology(2, 'Vue', 'path/to/vue-logo.png')],
+      ProjectCategory.Mobile
+    ),
+    new Project(
+      'Web Dev Project 1',
+      'Client B',
+      'http://example.com',
+      ['path/to/image3.jpg', 'path/to/image4.jpg'],
+      new Date(2023, 1, 1),
+      [new Technology(2, 'Vue', 'path/to/vue-logo.png')],
+      ProjectCategory.MostRecent
+    ),
+    new Project(
+      'Web Dev Project 1',
+      'Client B',
+      'http://example.com',
+      ['path/to/image3.jpg', 'path/to/image4.jpg'],
+      new Date(2023, 1, 1),
+      [new Technology(2, 'Vue', 'path/to/vue-logo.png')],
+      ProjectCategory.MostRecent
+    ),
+    new Project(
+      'Web Dev Project 1',
+      'Client B',
+      'http://example.com',
+      ['path/to/image3.jpg', 'path/to/image4.jpg'],
+      new Date(2023, 1, 1),
+      [new Technology(2, 'Vue', 'path/to/vue-logo.png')],
+      ProjectCategory.Conference
     ),
   ];
 
