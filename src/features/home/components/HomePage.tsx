@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import animationConfig from "../../../shared/utils/config/animationConfig";
+import animationConfig from "../../../config/animationConfig";
 import assets from "../../../assets/assets";
 import SideTitle from "./SideTitle";
 import ProjectCard from "../../../shared/components/ProjectCard";

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import assets from "../../assets/assets";
 import { motion } from "framer-motion";
-import animationConfig from "../utils/config/animationConfig";
+import animationConfig from "../../config/animationConfig";
 import { Button } from "./buttons";
 // import ButtonIcon from "../../base/Buttons/ButtonIcon";
 

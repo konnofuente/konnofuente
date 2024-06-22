@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import animationConfig from "../../../shared/utils/config/animationConfig";
+import animationConfig from "../../../config/animationConfig";
 
 const { delays, durations, easing } = animationConfig;
 

@@ -1,8 +1,6 @@
 import React from "react";
 import { ButtonState } from "../../utils/constants/enum";
 
-
-
 interface ButtonProps {
   textButton?: string;
   customCss?: string;

@@ -1,5 +1,6 @@
 import Header from "../shared/components/Header";
 import { Outlet } from "react-router-dom";
+import { ProjectProvider } from "../shared/context/ProjectContext";
 // import HomePage from "../pages/HomePage";
 
 const DefaultLayout: React.FC = () => {
@@ -10,11 +11,12 @@ const DefaultLayout: React.FC = () => {
       </div>
 
       <div className="mt-[70px] sm:mt-[80px]">
-        <Outlet />
+        <ProjectProvider>
+          <Outlet />
+        </ProjectProvider>
       </div>
     </div>
   );
 };
-
 
 export default DefaultLayout;
