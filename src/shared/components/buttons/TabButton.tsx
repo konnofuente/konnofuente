@@ -10,7 +10,7 @@ export const TabButton: React.FC<TabButtonProps> = ({ isActive, children ,onClic
   return (
     <div
     onClick={onClick}
-      className={`pointer-cursor sm:px-[10px] sm:py-[12px] lg:px-5 lg:py-[15px] rounded-[10px] justify-center items-center gap-2.5 flex ${
+      className={`pointer-cursor px-[10px] py-[12px] lg:px-5 lg:py-[15px] rounded-[10px] flex-shrink-0 ${
         isActive ? 'bg-primaryNormal' : 'bg-primaryLight'
       }`}
     >
