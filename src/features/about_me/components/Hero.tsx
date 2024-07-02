@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ButtonIcon } from "../../../shared/components/buttons";
 import { useAboutFeature } from "../hooks/useAboutFeature";
+import assets from "../../../assets/assets";
 
 const Hero: React.FC = () => {
   const { socialIcon } = useAboutFeature();
@@ -18,19 +19,19 @@ const Hero: React.FC = () => {
           </div>
           <div className="mt-5 flex justify-start items-center gap-5">
             {socialIcon.map((icon, index) => (
-              <ButtonIcon key={index} icon={icon.iconPath} />
+              <ButtonIcon key={index} icon={icon.src} />
             ))}
           </div>
         </div>
 
-        <div className="lg:pl-[123px] lg:pr-[121.62px] pt-4 lg:pt-[97px] flex justify-center items-center">
-          <div className="bg-white rounded-3xl flex flex-col justify-between items-center shadow-lg transform transition-transform duration-300 origin-top-left rotate-0 hover:rotate-1.80deg">
+        <div className=" pt-4 flex justify-center items-center min-w-[40%]">
+          <div className="min-w-[400px] min-h-[300px] bg-white rounded-3xl flex flex-col justify-between items-center shadow-lg transform transition-transform duration-300 origin-top-left rotate-0 hover:rotate-1.80deg">
             <img
               className="w-full max-w-xs lg:max-w-none"
-              src="https://via.placeholder.com/359x252"
+              src={assets.Images.sittinAtOffice}
               alt=""
             />
-            <div className="text-black text-base font-normal font-['Poppins'] leading-[30px] mt-4">
+            <div className="text-black text-[20px] font-normal font-['Poppins'] leading-[30px] mt-4">
               time to focus
             </div>
           </div>

@@ -8,6 +8,12 @@ const Images = {
   
   heroImage: require(IMAGE_PATH+'konnomelifuente.png'),
   projetCardDefault: require(IMAGE_PATH+'projetCardDefault.png'),
+  sittinAtOffice: require(IMAGE_PATH+'konnofuente-sitting-at-office.svg'),
+  xbetEvent: require(IMAGE_PATH+'1xbetEvent-konnofuente.svg'),
+  atRadioEvent: require(IMAGE_PATH+'at-readio-event-konnofuente.svg'),
+  hackathonEvent: require(IMAGE_PATH+'hackathon-award-konnofuente.svg'),
+  smillingOffice: require(IMAGE_PATH+'smilling-at-office-konnofuente.svg'),
+  tableSet: require(IMAGE_PATH+'table-set-konnofuente.svg'),
   };
 
 const Icons = {
