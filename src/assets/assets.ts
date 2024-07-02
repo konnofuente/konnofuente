@@ -17,6 +17,10 @@ const Icons = {
     vuejsIcon: require(ICON_PATH +'vuejs.svg'),
     flutterIcon: require(ICON_PATH +'flutter.svg'),
     firebaseIcon: require(ICON_PATH +'firebase.svg'),
+    emailGreyIcon: require(ICON_PATH +'email-grey.svg'),
+    linkedinGreyIcon: require(ICON_PATH +'linkedin-grey.svg'),
+    mediumGreyIcon: require(ICON_PATH +'medium-grey.svg'),
+    githubGreyIcon: require(ICON_PATH +'github-grey.svg'),
   };
   
   const Logos = {

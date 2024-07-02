@@ -1,29 +1,29 @@
 import React from "react";
 import { ButtonState } from "../../utils/constants/enum";
 
-
-
 interface ButtonIconProps {
   topText?: string;
-  leftText?: string;
+  bottomText?: string;
   icon?: string;
   state?: ButtonState;
   isFilled?: boolean;
   hoverEffect?: string;
   rounded?: boolean;
+  onClick?: () => void;
 }
 
 export const ButtonIcon: React.FC<ButtonIconProps> = ({
   topText,
-  leftText,
+  bottomText,
   icon,
   state = ButtonState.NORMAL,
   isFilled = true,
   hoverEffect = "",
   rounded = true,
+  onClick
 }) => {
   const baseClasses =
-    "grid justify-center items-center   cursor-pointer";
+    "grid justify-center items-center cursor-pointer";
   const roundedClass = rounded ? "sm:rounded-full" : "rounded-none";
   const stateClasses = {
     [ButtonState.NORMAL]: isFilled
@@ -40,10 +40,18 @@ export const ButtonIcon: React.FC<ButtonIconProps> = ({
   }`;
 
   return (
-    <div className={buttonClasses}>
-    { topText && <p className="text-base lg:text-xl text-center text-whiteNormal  font-Poppins font-medium">{topText}</p>}
+    <div className={buttonClasses} onClick={onClick}>
+      {topText && (
+        <p className="text-base lg:text-xl text-center text-whiteNormal font-Poppins font-medium">
+          {topText}
+        </p>
+      )}
       {icon && <img src={icon} alt="Icon right" />}
-    { leftText && <p className="text-base lg:text-xl text-center text-whiteNormal  font-Poppins font-medium">{topText}</p>}
+      {bottomText && (
+        <p className="text-base lg:text-xl text-center text-whiteNormal font-Poppins font-medium">
+          {bottomText}
+        </p>
+      )}
     </div>
   );
 };
