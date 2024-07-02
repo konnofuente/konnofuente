@@ -21,6 +21,7 @@ const Icons = {
     linkedinGreyIcon: require(ICON_PATH +'linkedin-grey.svg'),
     mediumGreyIcon: require(ICON_PATH +'medium-grey.svg'),
     githubGreyIcon: require(ICON_PATH +'github-grey.svg'),
+    instagramGreyIcon: require(ICON_PATH +'instagram-grey.svg'),
   };
   
   const Logos = {
