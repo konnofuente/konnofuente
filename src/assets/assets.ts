@@ -14,6 +14,15 @@ const Images = {
   hackathonEvent: require(IMAGE_PATH+'hackathon-award-konnofuente.svg'),
   smillingOffice: require(IMAGE_PATH+'smilling-at-office-konnofuente.svg'),
   tableSet: require(IMAGE_PATH+'table-set-konnofuente.svg'),
+
+
+  scheduleChart: require(IMAGE_PATH+'chart.svg'),
+  entrepreneurPassion: require(IMAGE_PATH+'entrepreneur_passion.svg'),
+  myStackPc: require(IMAGE_PATH+'my_stacks_pc.svg'),
+  seekingKnowledge: require(IMAGE_PATH+'seeking_knowledge.svg'),
+  weekendLeisure: require(IMAGE_PATH+'weekend_leisure.svg'),
+
+
   };
 
 const Icons = {
