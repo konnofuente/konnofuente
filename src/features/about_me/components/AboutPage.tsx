@@ -59,7 +59,11 @@ function AboutPage() {
     <div className="gradient-background min-h-screen overflow-hidden">
       <Hero />
       <ImageSlider />
-      <Title size={TitleSize.Large} title="Let Me Take You Through My Day" />
+      {/* <Title size={TitleSize.Large} title="Let Me Take You Through My Day" /> */}
+      <div className="flex justify-center p-4">
+
+      <div className="text-sky-950 text-[35px] sm:text-[45px] lg:text-[70px] text-center font-bold font-['Helvetica']"> Let Me Take You Through My Day</div>
+      </div>
 
       {dailySections.map((section, index) => (
         <ImageTextSection

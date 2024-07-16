@@ -16,6 +16,17 @@ code {
     monospace;
 }
 
+/* Custom Style for Scrollbar Hidden */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+
 /* Custom scrollbar styles (optional) */
 ::-webkit-scrollbar {
   height: 2px;

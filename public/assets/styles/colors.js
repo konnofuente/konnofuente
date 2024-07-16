@@ -41,4 +41,7 @@ export const colors = {
   blackDarkHover: "#131516",
   blackDarkActive: "#0e1011",
   blackDarker: "#0b0c0d",
+
+
+  
 };
