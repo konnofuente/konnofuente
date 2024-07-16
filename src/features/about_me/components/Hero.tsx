@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { ButtonIcon } from "../../../shared/components/buttons";
 import { useAboutFeature } from "../hooks/useAboutFeature";
 import assets from "../../../assets/assets";
@@ -22,7 +22,9 @@ const Hero: React.FC = () => {
 
           <div className="mt-5 flex justify-start items-center gap-5">
             {socialIcon.map((icon, index) => (
-              <ButtonIcon key={index} icon={icon.src} />
+              <ButtonIcon 
+              link={icon.url}
+              key={index} icon={icon.src} />
             ))}
           </div>
         </div>

@@ -1,26 +1,17 @@
 import React from "react";
 import { ButtonState } from "../../utils/constants/enum";
+import { ButtonProps } from "../../models/ButtonProps";
 
-interface ButtonIconProps {
-  topText?: string;
-  bottomText?: string;
-  icon?: string;
-  state?: ButtonState;
-  isFilled?: boolean;
-  hoverEffect?: string;
-  rounded?: boolean;
-  onClick?: () => void;
-}
-
-export const ButtonIcon: React.FC<ButtonIconProps> = ({
+export const ButtonIcon: React.FC<ButtonProps> = ({
   topText,
   bottomText,
   icon,
   state = ButtonState.NORMAL,
   isFilled = true,
   hoverEffect = "",
+  link = null,
   rounded = true,
-  onClick
+  onClick,
 }) => {
   const baseClasses =
     "grid justify-center items-center cursor-pointer";
@@ -39,8 +30,8 @@ export const ButtonIcon: React.FC<ButtonIconProps> = ({
     state === ButtonState.NORMAL && hoverEffect ? `hover:${hoverEffect}` : ""
   }`;
 
-  return (
-    <div className={buttonClasses} onClick={onClick}>
+  const content = (
+    <>
       {topText && (
         <p className="text-base lg:text-xl text-center text-whiteNormal font-Poppins font-medium">
           {topText}
@@ -52,6 +43,20 @@ export const ButtonIcon: React.FC<ButtonIconProps> = ({
           {bottomText}
         </p>
       )}
+    </>
+  );
+
+  if (link) {
+    return (
+      <a href={link} target="_blank" rel="noopener noreferrer" className={buttonClasses}>
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <div className={buttonClasses} onClick={onClick}>
+      {content}
     </div>
   );
 };

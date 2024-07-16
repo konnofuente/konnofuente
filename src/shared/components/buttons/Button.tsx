@@ -1,17 +1,8 @@
 import React from "react";
 import { ButtonState } from "../../utils/constants/enum";
+import { ButtonProps } from "../../models/ButtonProps";
 
-interface ButtonProps {
-  textButton?: string;
-  customCss?: string;
-  link?: string;
-  iconLeft?: string;
-  iconRight?: string;
-  state?: ButtonState;
-  isFilled?: boolean;
-  hoverEffect?: string;
-  rounded?: boolean;
-}
+
 
 export const Button: React.FC<ButtonProps> = ({
   textButton,
