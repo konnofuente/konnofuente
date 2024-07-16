@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroSection from './HeroSection';
+import HeroSection from './Hero';
 import RecentProjectsSection from './RecentProjectsSection';
 
 function HomePage() {
