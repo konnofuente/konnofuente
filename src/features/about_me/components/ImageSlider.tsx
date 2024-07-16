@@ -44,9 +44,8 @@ const ImageSlider: React.FC = () => {
             <motion.img
               src={selectedImage}
               alt="Selected Event"
-              className="rounded-lg"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              className="rounded-lg h-[50vh]"
+              initial={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             />
             <button

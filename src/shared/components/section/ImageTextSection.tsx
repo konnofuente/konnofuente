@@ -10,10 +10,10 @@ export interface ImageTextSectionProps {
 
 const ImageTextSection: React.FC<ImageTextSectionProps> = ({ title, description, image, onClick, imageLeft = false }) => {
   return (
-    <div className={`flex flex-col md:flex-row ${imageLeft ? 'md:flex-row-reverse' : ''} items-center gap-10 py-[40px]  px-[250px]` }>
+    <div className={`flex flex-col md:flex-row ${imageLeft ? 'md:flex-row-reverse' : ''} items-center gap-10 py-[40px] px-[10px] sm:px-[40px]  lg:px-[200px]` }>
       <div className="flex-1">
-        <h2 className="lg:text-[45px] font-bold text-primaryNormal ">{title}</h2>
-        <p className="mt-4 text-lg text-whiteDarker">{description}</p>
+        <h2 className=" text-[30px] md:text-[35px] lg:text-[45px] font-bold text-primaryNormal ">{title}</h2>
+        <p className="mt-4 md:text-[15px] text-lg text-whiteDarker">{description}</p>
 
    {
      onClick !== null ? (

@@ -28,13 +28,13 @@ const Title: React.FC<TitleProps> = ({ title, description, size }) => {
     <div className="text-center py-[50px] grid justify-center items-center">
       <div
         style={{ fontSize }}
-        className="text-primaryNormal font-bold font-['Helvetica'] leading-[70px]"
+        className="text-primaryNormal font-[700] font-['Helvetica'] leading-[70px]"
       >
         {title}
       </div>
       {description && (
         <div className="flex justify-center text-gray-600 w-full text-center mt-4 px-4 ">
-          <p className="sm:w-1/2">{description}</p>
+          <p className="w-[95%] sm:w-[80%] font-[600] lg:w-1/2 text-[14px] sm:text-[16px] ">{description}</p>
         </div>
       )}
     </div>
