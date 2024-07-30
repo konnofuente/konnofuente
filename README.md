@@ -8,7 +8,7 @@ Some github stats about me 🤧
 
 This  last update about me was on on 🗓️24 May 2024 😅 
 
-- 🔭 I’m currently working on MapnRank and Taxiliz
+- 🔭 I’m currently working on MapnRank and Manzon
 - 🌱 I’m currently learning Nothing 😂
 - 👯 I’m looking to collaborate on a Fintech project
 - 🤔 I’m looking for help with 💭
