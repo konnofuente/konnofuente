@@ -1,29 +1,20 @@
 import React from "react";
 import { ButtonState } from "../../utils/constants/enum";
+import { ButtonProps } from "../../models/ButtonProps";
 
-
-
-interface ButtonIconProps {
-  topText?: string;
-  leftText?: string;
-  icon?: string;
-  state?: ButtonState;
-  isFilled?: boolean;
-  hoverEffect?: string;
-  rounded?: boolean;
-}
-
-export const ButtonIcon: React.FC<ButtonIconProps> = ({
+export const ButtonIcon: React.FC<ButtonProps> = ({
   topText,
-  leftText,
+  bottomText,
   icon,
   state = ButtonState.NORMAL,
   isFilled = true,
   hoverEffect = "",
+  link = null,
   rounded = true,
+  onClick,
 }) => {
   const baseClasses =
-    "grid justify-center items-center   cursor-pointer";
+    "grid justify-center items-center cursor-pointer";
   const roundedClass = rounded ? "sm:rounded-full" : "rounded-none";
   const stateClasses = {
     [ButtonState.NORMAL]: isFilled
@@ -39,11 +30,33 @@ export const ButtonIcon: React.FC<ButtonIconProps> = ({
     state === ButtonState.NORMAL && hoverEffect ? `hover:${hoverEffect}` : ""
   }`;
 
-  return (
-    <div className={buttonClasses}>
-    { topText && <p className="text-base lg:text-xl text-center text-whiteNormal  font-Poppins font-medium">{topText}</p>}
+  const content = (
+    <>
+      {topText && (
+        <p className="text-base lg:text-xl text-center text-whiteNormal font-Poppins font-medium">
+          {topText}
+        </p>
+      )}
       {icon && <img src={icon} alt="Icon right" />}
-    { leftText && <p className="text-base lg:text-xl text-center text-whiteNormal  font-Poppins font-medium">{topText}</p>}
+      {bottomText && (
+        <p className="text-base lg:text-xl text-center text-whiteNormal font-Poppins font-medium">
+          {bottomText}
+        </p>
+      )}
+    </>
+  );
+
+  if (link) {
+    return (
+      <a href={link} target="_blank" rel="noopener noreferrer" className={buttonClasses}>
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <div className={buttonClasses} onClick={onClick}>
+      {content}
     </div>
   );
 };

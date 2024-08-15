@@ -1,6 +1,7 @@
 import Header from "../shared/components/Header";
 import { Outlet } from "react-router-dom";
 import { ProjectProvider } from "../shared/context/ProjectContext";
+import Footer from "../shared/components/Footer";
 // import HomePage from "../pages/HomePage";
 
 const DefaultLayout: React.FC = () => {
@@ -14,6 +15,10 @@ const DefaultLayout: React.FC = () => {
         <ProjectProvider>
           <Outlet />
         </ProjectProvider>
+      </div>
+
+      <div>
+        <Footer></Footer>
       </div>
     </div>
   );
