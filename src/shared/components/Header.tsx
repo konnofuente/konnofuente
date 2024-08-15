@@ -3,6 +3,8 @@ import assets from "../../assets/assets";
 import { motion } from "framer-motion";
 import animationConfig from "../../config/animationConfig";
 import { Button } from "./buttons";
+import { APP_ROUTE_PATH } from "../../routes/app_route_path";
+import { Link } from "react-router-dom";
 // import ButtonIcon from "../../base/Buttons/ButtonIcon";
 
 const { delays, durations, easing } = animationConfig;
@@ -15,13 +17,13 @@ export interface INavItem {
 export default function Header() {
   const [t] = useTranslation("message");
 
-  // const navItems: INavItem[] = [
-  //   { item: "header.home", route: "/" },
-  //   { item: "header.about", route: "/about-us" },
-  //   { item: "header.myExpertise", route: "/expertise" },
-  //   { item: "header.project", route: "/project" },
-  //   { item: "header.experience", route: "/experience" },
-  // ];
+  const navItems: INavItem[] = [
+    { item: "header.home", route: "/" },
+    { item: "header.about", route: APP_ROUTE_PATH.about },
+    // { item: "header.myExpertise", route: "/expertise" },
+    // { item: "header.project", route: "/project" },
+    // { item: "header.experience", route: "/experience" },
+  ];
 
   return (
     <motion.header 
@@ -38,23 +40,25 @@ export default function Header() {
         className="w-14 sm:w-16 md:w-20 h-auto"
       />
     </motion.div>
-        {/* 
+        
 
-        <div className="w-2/4 hidden lg:flex overflow-hidden shrink-0  flex-row items-center justify-start p-5 box-border gap-[30px]">
-          <ul className=" hidden lg:flex  py-20px items-center space-x-4 justify-between w-full ">
+        <div className="w-2/4 hidden lg:flex overflow-hidden shrink-0 justify-center flex-row items-center p-5 box-border gap-[30px]">
+          <ul className=" hidden lg:flex  py-20px items-center justify-center space-x-4  w-full ">
             {navItems.map((navItem, index) => (
               <li key={index} className="cursor-pointer">
-                <span className="text-stone-50 text-lg font-normal font-Poppins leading-[35px] text-center items-center hover:text-gray-300">
-                  {t(`${navItem.item}`)}
-                </span>
+                <Link to={navItem.route}>
+                  <span className="text-stone-50 text-lg font-normal font-Poppins leading-[35px] text-center items-center hover:text-gray-300">
+                    {t(`${navItem.item}`)}
+                  </span>
+                </Link>
               </li>
             ))}
           </ul>
         </div>
         
-*/}
 
-        <div className="hidden lg:flex justify-end w-1/4">
+
+        <div className="hidden lg:flex justify-start w-auto">
           <Button
             textButton="Contact Me"
             isFilled={false}
