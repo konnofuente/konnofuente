@@ -35,6 +35,7 @@ const {activeIndex,tabLabels,setActiveIndex,loading,error,filteredProjects} = us
               key={index}
               projectName={project.name}
               clientName={project.client}
+              labels={project.labels}
             />
           ))}
       </div>

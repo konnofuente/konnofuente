@@ -1,3 +1,4 @@
+import { ProjectLabel } from "../enums/ProjectLabels";
 import { ProjectCategory } from "../utils/constants/enum";
 import { Technology } from "./Technology";
 
@@ -10,7 +11,8 @@ export class Project {
     created: Date;
     technologies: Technology[];
     category: ProjectCategory;
-  
+    labels?: ProjectLabel[];
+    
     constructor(
       name: string,
       client: string,
@@ -18,7 +20,8 @@ export class Project {
       images: string[],
       created: Date,
       technologies: Technology[],
-      category: ProjectCategory
+      category: ProjectCategory,
+      labels?: ProjectLabel[],
     ) {
       this.name = name;
       this.client = client;
@@ -27,5 +30,6 @@ export class Project {
       this.created = created;
       this.technologies = technologies;
       this.category = category;
+      this.labels = labels;
     }
   }

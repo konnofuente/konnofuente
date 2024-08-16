@@ -1,3 +1,4 @@
+import { ProjectLabel } from "../enums/ProjectLabels";
 import { Project, Technology } from "../models";
 import { ProjectCategory } from "../utils/constants/enum";
 
@@ -12,7 +13,8 @@ export const fetchProjects = async (): Promise<Project[]> => {
       ['path/to/image1.jpg', 'path/to/image2.jpg'],
       new Date(2023, 1, 1),
       [new Technology(1, 'React', 'path/to/react-logo.png')],
-      ProjectCategory.MostRecent
+      ProjectCategory.MostRecent,
+      [ProjectLabel.Wordpress, ProjectLabel.ReactTs]
     ),
     new Project(
       'Web Dev Project 1',
