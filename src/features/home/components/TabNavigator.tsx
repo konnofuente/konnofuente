@@ -12,7 +12,7 @@ const {activeIndex,tabLabels,setActiveIndex,loading,error,filteredProjects} = us
   return (
     <div className="  w-full flex-col justify-start items-center inline-flex">
       <div className=" no-scrollbar w-full overflow-x-auto">
-        <div className="flex space-x-10 sm:justify-between items-center flex-nowrap">
+        <div className="flex space-x-10 sm:justify-between items-center cursor-pointer flex-nowrap">
           {tabLabels.map((label, index) => (
             <TabButton
               key={index}
@@ -34,7 +34,8 @@ const {activeIndex,tabLabels,setActiveIndex,loading,error,filteredProjects} = us
             <ProjectCard
               key={index}
               projectName={project.name}
-              clientName={project.client}
+              description={project.client}
+              link={project.livelink}
               labels={project.labels}
             />
           ))}

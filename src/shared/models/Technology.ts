@@ -1,11 +1,13 @@
+import { Stack } from "../enums/Stacks";
+
 export class Technology {
     id: number;
-    name: string;
+    stack: Stack;
     logo?: string;
   
-    constructor(id: number, name: string, logo?: string) {
+    constructor(id: number, stack: Stack, logo?: string) {
       this.id = id;
-      this.name = name;
+      this.stack = stack;
       this.logo = logo;
     }
   }
