@@ -6,6 +6,8 @@ import { TitleSize } from "../../../shared/utils/constants/enum/TitleSize";
 import ImageTextSection from "../../../shared/components/section/ImageTextSection";
 import { useAboutFeature } from "../hooks/useAboutFeature";
 
+
+
 function AboutPage() {
   const { finalizeSections, dailySections } = useAboutFeature();
 
