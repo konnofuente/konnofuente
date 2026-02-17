@@ -8,9 +8,9 @@ Some github stats about me 🤧
 
 This  last update about me was on on 🗓️24 May 2024 😅 
 
-- 🔭 I’m currently working on MapnRank and Manzon
+- 🔭 I’m currently working on Geskap
 - 🌱 I’m currently learning Nothing 😂
-- 👯 I’m looking to collaborate on a Fintech project
+- 👯 I'am CEO of CamaireTech https://camairetech.com/
 - 🤔 I’m looking for help with 💭
 - 💬 Ask me about my passion
 - 📫 How to reach me: LinkedIn-https://shorturl.at/N928R & konomelifuente@gmail.com
